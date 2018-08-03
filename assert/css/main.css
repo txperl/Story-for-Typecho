@@ -11,6 +11,19 @@
          url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.svg#JosefinSans') format('svg'); /* Legacy iOS */
 }
+/* pt-sans-regular */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: regular;
+  src: url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot'); /* IE9 Compat Modes */
+  src: local('PT Sans'), local('PTSans-Normal'),
+       url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.woff') format('woff'), /* Modern Browsers */
+       url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+}
 
 html::-webkit-scrollbar-track-piece{}
 html::-webkit-scrollbar{width:8px;height:8px;}
@@ -36,6 +49,11 @@ body,footer {
     font-weight: 400;
     line-height: 2em;
 }
+    @media screen and (min-width: 1681px) {
+        body p,footer p {
+            font-size: 12pt;
+        }
+    }
     @media screen and (max-width: 1680px) {
         body,footer {
             font-size: 11pt;
@@ -172,6 +190,9 @@ blockquote:after {
     text-align: right;
     font-size: 0.875em;
     color: #e74c3c;
+}
+blockquote p {
+    font-size: 0.8em;
 }
 blockquote p, blockquote pre {
     margin: 0 !important;

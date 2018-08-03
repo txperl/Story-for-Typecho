@@ -61,7 +61,8 @@ function post_tor($content){
 	preg_match_all('/<h[3-4]>(.*?)<\/h[3-4]>/', $content, $tor_i);
 	$num=count($tor_i[0]);
 	for ($i=0; $i < $num; $i++) { 
-		$a='<a href="#anchor-'.$i.'">'.$tor_i[0][$i].'</a>';
+		$n=$i+1;
+		$a='<a href="#anchor-'.$n.'">'.$tor_i[0][$i].'</a>';
 		$f=$f.$a;
 	}
 	$f=str_replace('<h3>','<span class="tori">',$f);
