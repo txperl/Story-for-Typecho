@@ -6,7 +6,7 @@
     if ($style_BGPic != '') {
         echo '<style>';
         echo "\n";
-        echo 'body{background: #fff;}body::before {background: url('.$style_BGPic.') center/cover no-repeat;}';
+        echo 'body{background: #fff;}body::before {background: url('.$style_BGPic.') center/cover no-repeat;}blockquote::before {background: transparent !important;}';
         echo "\n";
         echo '</style>';
         echo "\n";
