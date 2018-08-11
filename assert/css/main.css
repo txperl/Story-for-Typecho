@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #484848;
     font-weight: 700;
     line-height: 1em;
-    margin: 0.5em 0 0.3em 0;
+    margin: 0.5em 0 1em 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
@@ -157,9 +157,8 @@ h6 {
     line-height: 1.5em;
 }
 img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    margin: 0 10%;
 }
 blockquote {
     font-size: 0.8em;
@@ -206,7 +205,7 @@ blockquote ul, blockquote ol {
 }
 #footer {
     text-align: center;
-    margin: 2em;
+    margin: 1.5em;
     background-color: transparent;
 }
 .logo {
@@ -253,6 +252,9 @@ blockquote ul, blockquote ol {
     list-style: none;
     margin: 0 auto;
     width: 1280px;
+}
+.post-list h1, .post-list h2, .post-list h3, .post-list h4, .post-list h5, .post-list h6 {
+    margin: 0.5em 0 0.3em 0;
 }
 .post-list a {
     transition: all .24s ease;
@@ -316,7 +318,7 @@ blockquote ul, blockquote ol {
 .posti .post-title {
     margin-bottom: 0;
 }
-.posti .post-meta p{
+.posti .post-meta p {
     color:#55555587 !important;
 }
 .posti h3:before {
@@ -338,10 +340,15 @@ blockquote ul, blockquote ol {
     font-weight: 400;
 }
 .posti ul, .posti ol {
-    margin: 1em 0 1em 2em;
+    margin: 2em 0 2em 2em;
 }
 .posti ul li {
     list-style: square;
+}
+.posti img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 10%;
 }
 .nav-page {
     margin: 3em auto 2em auto;
@@ -350,7 +357,7 @@ blockquote ul, blockquote ol {
     float: left;
     background-color: transparent;
     width: 25px;
-    height: 25px;
+    height: 30px;
     color: #414141;
     margin: 0 2px;
 }
@@ -365,7 +372,7 @@ blockquote ul, blockquote ol {
     text-align: center;
     float: left;
 }
-.nav-page ol .current a{
+.nav-page ol .current a {
     border-bottom: 1px solid #414141;
 }
 .index-time {
@@ -516,7 +523,7 @@ blockquote ul, blockquote ol {
     float:left;
     width:40px;
     height:40px;
-    margin:1.4rem 1rem 0 0;
+    margin:1.4rem 1rem 0 0 !important;
     border-radius:50%;
 }
 .comment_main {
@@ -581,7 +588,8 @@ blockquote ul, blockquote ol {
     color: #fff;
     background-color: #414141;
     width: 84px;
-    height: 26px;
+    height: 36px;
+    line-height: 40px;
     padding: 0 12px;
     overflow: hidden;
 }
@@ -624,6 +632,9 @@ blockquote ul, blockquote ol {
 }
 #torTree .torii:before {
     content: '& ';
+}
+.cPlayer img {
+    max-width: 100%;
 }
 
 @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}

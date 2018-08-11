@@ -27,7 +27,7 @@ Demo: [Yumoe](https://yumoe.com/).
 本主题没有配置文件，所以要修改标题必须自行修改代码...位于 `header.php` 的 `class .header-logo(51行处)` ，用 `<span class="b"></span>` 及 `<span class="w"></span>` 把自已的站点标题拼接出来就行了，其他可以不做修改。
 
 ##### 修改网站标题后菜单定位
-若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(572行处)` 及 `#search-box(591行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
+若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(579行处)` 及 `#search-box(599行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
 
 ##### 背景图设置
 若要设置背景图，请修改位于 `header.php` 的 `$style_BGPic(5行处)` 变量值。改为图片链接即可，留空即为关闭。

@@ -31,7 +31,7 @@
     	    <?php endwhile; ?>
             <?php else: ?>
             <br><br>
-            <h2 class="post-title"><center><?php _e('(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀) 没有找到什么唉...'); ?></center></h2>
+            <h2 class="post-title"><center><?php _e('(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀) 什么都没有找到唉...'); ?></center></h2>
             <?php endif; ?>
 		</div>
 	</div>
