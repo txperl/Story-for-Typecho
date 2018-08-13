@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: regular;
+    font-weight: normal;
     src: url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot'); /* IE9 Compat Modes */
     src: local('Josefin Sans'), local('JosefinSans-Normal'),
          url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
-  font-weight: regular;
+  font-weight: normal;
   src: url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot'); /* IE9 Compat Modes */
   src: local('PT Sans'), local('PTSans-Normal'),
        url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
