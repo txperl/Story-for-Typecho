@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: regular;
+    font-weight: normal;
     src: url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot'); /* IE9 Compat Modes */
     src: local('Josefin Sans'), local('JosefinSans-Normal'),
          url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
-  font-weight: regular;
+  font-weight: normal;
   src: url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot'); /* IE9 Compat Modes */
   src: local('PT Sans'), local('PTSans-Normal'),
        url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -98,11 +98,14 @@ body:before {
     filter: gray;
 }
 a {
+    color: #ff7474;
     color: #ff5252cc;
     transition: color .2s ease,border-color .2s ease,background .2s ease,opacity .2s ease;
 }
 a:hover {
+    color: #ff7474;
     color: #ff5252cc;
+    background-color: #fdedf3;
     background-color: #fce4eca1;
     text-decoration: none;
     transition: color .2s ease,border-color .2s ease,background .2s ease,opacity .2s ease;
@@ -180,6 +183,7 @@ blockquote:before {
     width: 3rem;
     height: 2rem;
     font: 6em/1.08em 'PT Sans', sans-serif;
+    color: #e96153;
     color: #e74c3ce0;
     text-align: center;
 }
@@ -278,6 +282,7 @@ blockquote ul, blockquote ol {
     padding: 20px;
 }
 .post-list>li .post-link:hover {
+    border-color: #ff7474;
     border-color: #ff5252cc;
 }
 .post-list>li .post-title {
@@ -291,6 +296,7 @@ blockquote ul, blockquote ol {
     transition: all .24s;
 }
 .post-list>li .post-link:hover .post-title {
+    color: #ff7474;
     color: #ff5252cc;
 }
 .post-list>li .post-meta {
@@ -306,6 +312,7 @@ blockquote ul, blockquote ol {
     transition: all .24s;
 }
 .post-list>li .post-link:hover .post-meta {
+    background: #ff7474;
     background: #ff5252cc;
 }
 .posti {
@@ -319,6 +326,7 @@ blockquote ul, blockquote ol {
     margin-bottom: 0;
 }
 .posti .post-meta p {
+    color:#a5a5a5 !important;
     color:#55555587 !important;
 }
 .posti h3:before {
