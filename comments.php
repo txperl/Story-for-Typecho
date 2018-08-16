@@ -64,7 +64,7 @@ echo $commentClass;
             <?php endif; ?>
             </div>
             <div class="comment-editor">
-                <textarea name="text" id="textarea" class="textarea" required  onkeydown="if((event.ctrlKey||event.metaKey)&&event.keyCode==13){document.getElementById('submitComment').click();return false};"><?php $this->remember('text'); ?></textarea>
+                <textarea name="text" id="textarea" class="textarea" required onkeydown="if((event.ctrlKey||event.metaKey)&&event.keyCode==13){document.getElementById('submitComment').click();return false};"><?php $this->remember('text'); ?></textarea>
             </div>
     		<div class="comment-buttons">
                 <div class="left">

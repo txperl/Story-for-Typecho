@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: regular;
+    font-weight: normal;
     src: url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot'); /* IE9 Compat Modes */
     src: local('Josefin Sans'), local('JosefinSans-Normal'),
          url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
-  font-weight: regular;
+  font-weight: normal;
   src: url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot'); /* IE9 Compat Modes */
   src: local('PT Sans'), local('PTSans-Normal'),
        url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -98,11 +98,14 @@ body:before {
     filter: gray;
 }
 a {
+    color: rgba(255, 82, 82, 0.8);
     color: #ff5252cc;
     transition: color .2s ease,border-color .2s ease,background .2s ease,opacity .2s ease;
 }
 a:hover {
+    color: rgba(255, 82, 82, 0.8);
     color: #ff5252cc;
+    background-color: rgba(252, 228, 236, 0.6313725490196078);
     background-color: #fce4eca1;
     text-decoration: none;
     transition: color .2s ease,border-color .2s ease,background .2s ease,opacity .2s ease;
@@ -180,6 +183,7 @@ blockquote:before {
     width: 3rem;
     height: 2rem;
     font: 6em/1.08em 'PT Sans', sans-serif;
+    color: rgba(231, 76, 60, 0.8784313725490196);
     color: #e74c3ce0;
     text-align: center;
 }
@@ -272,12 +276,15 @@ blockquote ul, blockquote ol {
 .post-list>li .post-link {
     position: relative;
     display: block;
+    word-break: break-word;
+    overflow: hidden;
     width: 100%;
     height: 100%;
     border: 4px solid #414141;
     padding: 20px;
 }
 .post-list>li .post-link:hover {
+    border-color: rgba(255, 82, 82, 0.8);
     border-color: #ff5252cc;
 }
 .post-list>li .post-title {
@@ -291,6 +298,7 @@ blockquote ul, blockquote ol {
     transition: all .24s;
 }
 .post-list>li .post-link:hover .post-title {
+    color: rgba(255, 82, 82, 0.8);
     color: #ff5252cc;
 }
 .post-list>li .post-meta {
@@ -306,6 +314,7 @@ blockquote ul, blockquote ol {
     transition: all .24s;
 }
 .post-list>li .post-link:hover .post-meta {
+    background: rgba(255, 82, 82, 0.8);
     background: #ff5252cc;
 }
 .posti {
@@ -319,7 +328,8 @@ blockquote ul, blockquote ol {
     margin-bottom: 0;
 }
 .posti .post-meta p {
-    color:#55555587 !important;
+    color: rgba(85, 85, 85, 0.5294117647058824) !important;
+    color: #55555587 !important;
 }
 .posti h3:before {
     position: absolute;
