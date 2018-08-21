@@ -698,7 +698,7 @@ blockquote ul, blockquote ol {
 }
 @media (max-width: 460px){
     #search-box {
-        margin-left: 0;
+        margin-left: 0 !important;
         margin-top: 22px;
     }
 }

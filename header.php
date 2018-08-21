@@ -1,7 +1,8 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
-<?php 
+<?php
+    require_once 'config.php';
     $style_BGPic = ''; //背景图设置。填入图片 URL 地址，留空为关闭。
     if ($style_BGPic != '') {
         echo '<style>';
@@ -30,6 +31,9 @@
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/prism.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/zoom.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/main.css'); ?>">
+<?php if($GLOBALS['isIconNav'] == 'on'): ?>
+    <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/twemoji-awesome.css'); ?>">
+<?php endif; ?>
 
     <!--[if lt IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -60,13 +64,25 @@
                     <span class="b">·</span>
                 </a>
                 <a href="javascript:isMenu1();">
+<?php if($GLOBALS['isIconNav'] == 'on'): ?>
+                    <span id="menu-1" class="bf"><i class="twa twa-flags"></i></span>
+<?php else: ?>
                     <span id="menu-1" class="bf">1</span>
+<?php endif; ?>
                 </a>
                 <a href="javascript:isMenu2();">
+<?php if($GLOBALS['isIconNav'] == 'on'): ?>
+                    <span id="menu-2" class="bf"><i class="twa twa-evergreen-tree"></i></span>
+<?php else: ?>
                     <span id="menu-2" class="bf">2</span>
+<?php endif; ?>
                 </a>
                 <a href="javascript:isMenu3();">
+<?php if($GLOBALS['isIconNav'] == 'on'): ?>
+                    <span id="menu-3" class="bf"><i class="twa twa-mag"></i></span>
+<?php else: ?>
                     <span id="menu-3" class="bf">3</span>
+<?php endif; ?>
                 </a>
             </div>
             <div id="menu-page">

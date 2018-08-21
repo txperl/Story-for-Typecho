@@ -17,6 +17,20 @@
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
     window.onload=function(){
+<?php if($GLOBALS['isAutoNav'] == 'on'): ?>
+        var b = document.getElementsByClassName('b');
+        var w =  document.getElementsByClassName('w');
+        var menupgMargin = (b.length+w.length)*28;
+        var srhboxMargin = (b.length+w.length+3)*28;
+        var menusrhWidth = (b.length+w.length-1)*28;
+        document.getElementById('menu-page').style['margin-left'] = menupgMargin+'px';
+        document.getElementById('search-box').style['margin-left'] = srhboxMargin+'px';
+        document.getElementById('menu-search').style['width'] = menusrhWidth+'px';
+        if (menusrhWidth < 140) {
+            document.getElementById('menu-search').setAttribute('placeholder','Search~');
+        }
+<?php endif; ?>
+
         if (window.location.hash!='') {
           var i=window.location.hash.indexOf('#comment');
           var ii=window.location.hash.indexOf('#respond-post');
@@ -56,6 +70,8 @@
             } else {
                 $('#torTree').fadeIn(300);
             }
+        } else {
+            alert('人家是导航树啦！只有在特定的文章页面才会出现哦...');
         }
     }
 
