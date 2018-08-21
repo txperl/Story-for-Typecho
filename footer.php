@@ -60,10 +60,12 @@
     }
 
     function isMenu3(){
-        if(document.getElementById('search-box').style.display=='block'){
+        if($('#search-box').css('display')!='none'){
             $('#search-box').fadeOut(300);
         } else {
             $('#search-box').fadeIn(300);
+            $('#search-box').css('display', 'table-cell');
+            $('.header-logo').css('display', 'table-cell');
         }
     }
 
