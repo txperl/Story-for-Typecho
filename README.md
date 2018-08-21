@@ -8,6 +8,9 @@
 
 Demo: [Yumoe](https://yumoe.com/).
 
+Version@[Halo](https://github.com/ruibaby/halo)：[story-halo](https://github.com/ruibaby/story-halo) by ruibaby, thanks.
+Version@[纸小墨](https://www.chole.io/)：[ink-theme-story](https://github.com/akkuman/ink-theme-story) by akkuman, thanks.
+
 ### Story v1@.0
 #### 预览图
 [主页](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story1.png) & [主页_背景图](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story3.png) & [文章页](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story2.png)
@@ -17,6 +20,15 @@ Demo: [Yumoe](https://yumoe.com/).
 个人认为这是一个适合写作与阅读的主题，所以我打算在这篇发布文章中以长段落的形式来写。首先，说说为什么要写 Typecho 版本的吧。具体有三点：一是 Typecho 轻量(相对)；二是习惯写 Typecho 主题了，本地有很多写的练手项目可以参考；三是我本身对博客系统不怎么感冒，用了一个就不怎么想换了。本来打算把 Story 也写得很轻量，但迫于一些原因，就引用了以下项目(感谢): [75CDN](https://cdn.baomitu.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/), [zoom_vanilla.js](https://github.com/spinningarrow/zoom-vanilla.js), [Prism.js](https://prismjs.com/), [Twemoji Awesome](https://github.com/ellekasai/twemoji-awesome). 其实 jQuery 就用了它的 `FadeIn()`, `FadeOut()` 函数，本来打算用纯 JavaScript 语法写的，但，emm...Prism 也是见仁见智吧，很多人都不需要的。
 
 #### 主题的一些食用说明
+##### config.php
+Story 包含一个全局配置文件。
+
+```
+//on 为开启
+//off&其他 为关闭
+$GLOBALS['isAutoNav'] = 'off'; //自动设置导航栏中 margin 及 width 值
+$GLOBALS['isIconNav'] = 'off'; //将导航栏中的 1,2,3 替换成 Emoji 图标，但要额外加载 222k 的 Twitter Emoji CSS 文件
+```
 
 ##### 菜单
 
