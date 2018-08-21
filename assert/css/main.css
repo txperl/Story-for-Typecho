@@ -588,9 +588,9 @@ blockquote ul, blockquote ol {
 }
 #menu-page {
     display: none;
-    position: absolute;
+    position: relative;
     z-index: 100;
-    margin: 26px 0 0 168px;
+    float: right;
 }
 #menu-page li {
     transition: all .24s;
@@ -608,8 +608,6 @@ blockquote ul, blockquote ol {
 }
 #search-box {
     display: none;
-    position: absolute;
-    margin-left: 252px;
     overflow: hidden;
 }
 #search-box input {
