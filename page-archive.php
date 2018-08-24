@@ -34,9 +34,10 @@
                 </div>
 
                 <h3>Post</h3>
+                <div id="archives">
                 <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);
                     $year=0; $mon=0; $i=0; $j=0;
-                    $output = '<div id="archives">';
+                    $output = '';
                     while($archives->next()):
                         $year_tmp = date('Y',$archives->created);
                         $mon_tmp = date('m',$archives->created);
@@ -50,6 +51,7 @@
                     endwhile;
                     echo $output;
                 ?>
+                </div>
             </article>
         </div>
     </div>
