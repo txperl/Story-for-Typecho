@@ -13,7 +13,7 @@ Version@[纸小墨](https://www.chole.io/)：[ink-theme-story](https://github.co
 
 ### Story v1@.0
 #### 预览图
-[主页](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story1.png) & [主页_背景图](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story3.png) & [文章页](http://7vzp04.com1.z0.glb.clouddn.com/image/story/story2.png)
+[主页](https://i.loli.net/2018/10/09/5bbcbea01d230.png)
 
 #### 述说
 
@@ -26,27 +26,29 @@ Story 包含一个全局配置文件。
 ```
 //on 为开启
 //off&其他 为关闭
-$GLOBALS['isAutoNav'] = 'off'; //自动设置导航栏中 margin 及 width 值
-$GLOBALS['isIconNav'] = 'off'; //将导航栏中的 1,2,3 替换成 Emoji 图标，但要额外加载 222k 的 Twitter Emoji CSS 文件
+$GLOBALS['isAutoNav'] = 'off'; //自动设置导航栏中 margin 及 width 值（推荐开启）
+$GLOBALS['isIconNav'] = 'off'; //将导航栏中的 1,2,3 替换成 Emoji 图标
+
+$GLOBALS['style_BG'] = ''; //背景图设置。填入图片 URL 地址，留空为关闭
 ```
 
 ##### 菜单
 
 标题旁边有一个 · 字符，点击后便可显示菜单。**1**,**2**,**3** 分别代表 **独立页面菜单**、**导航树**(仅在文章界面有用，仅解析 h3,h4 标签)以及**搜索框**。
 
-若您觉得 1,2,3 太抽象，可以将 `config.php` 中 `$GLOBALS['isIconNav']` 设置为 `on` 即可替换成相应 Emoji 图标，但要额外加载 222k 的 Twitter Emoji CSS 文件。
+若您觉得 1,2,3 太抽象，可以将 `config.php` 中 `$GLOBALS['isIconNav']` 设置为 `on` 即可替换成相应 Emoji 图标。
 
 ##### 网站标题修改
 
-本主题没有配置文件，所以要修改标题必须自行修改代码...位于 `header.php` 的 `class .header-logo(55行处)` ，用 `<span class="b"></span>` 及 `<span class="w"></span>` 把自已的站点标题拼接出来就行了，其他可以不做修改。
+本主题要修改标题必须自行修改代码...位于 `header.php` 的 `class .header-logo(54行处)` ，用 `<span class="b"></span>` 及 `<span class="w"></span>` 把自已的站点标题拼接出来就行了，其他可以不做修改。
 
 ##### 修改网站标题后菜单定位
 您可以将 `config.php` 中 `$GLOBALS['isAutoNav']` 设置为 `on` 即可自动调整，无需进行以下操作。
 
-若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(589行处)` 及 `#search-box(609行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
+若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(598行处)` 及 `#search-box(618行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
 
 ##### 背景图设置
-若要设置背景图，请修改位于 `header.php` 的 `$style_BGPic(6行处)` 变量值。改为图片链接即可，留空即为关闭。
+若要设置背景图，请修改位于 `config.php` 的 `$GLOBALS['style_BG']` 变量值。改为图片链接即可，留空即为关闭。
 
 ##### 其他
 

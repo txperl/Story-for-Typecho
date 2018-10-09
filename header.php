@@ -3,11 +3,10 @@
 <!DOCTYPE HTML>
 <?php
     require_once 'config.php';
-    $style_BGPic = ''; //背景图设置。填入图片 URL 地址，留空为关闭。
-    if ($style_BGPic != '') {
+    if ($GLOBALS['style_BG'] != '') {
         echo '<style>';
         echo "\n";
-        echo 'body{background: #fff;}body::before {background: url('.$style_BGPic.') center/cover no-repeat;}blockquote::before {background: transparent !important;}';
+        echo 'body{background: #fff;}body::before {background: url('.$GLOBALS['style_BG'].') center/cover no-repeat;}blockquote::before {background: transparent !important;}';
         echo "\n";
         echo '</style>';
         echo "\n";

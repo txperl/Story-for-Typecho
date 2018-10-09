@@ -6,7 +6,7 @@
  * 
  * @package Story
  * @author Trii Hsia
- * @version v1@.0 #20180821
+ * @version v1@.0 #20181009
  * @link https://yumoe.com
  */
 
