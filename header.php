@@ -52,6 +52,7 @@
     <div class="row">
         <div class="logo">
             <div class="header-logo">
+                <!-- 标题开始 -->
                 <span class="b">Y</span>
                 <span class="b">U</span>
                 <a href="<?php $this->options->siteUrl(); ?>">
@@ -59,6 +60,7 @@
                 </a>
                 <span class="b">O</span>
                 <span class="b">E</span>
+                <!-- 标题结束 -->
                 <a id="btn-menu" href="javascript:isMenu();">
                     <span class="b">·</span>
                 </a>
@@ -89,6 +91,9 @@
             <?php while($pages->next()): ?>
                 <a href="<?php $pages->permalink(); ?>"><li><?php $pages->title(); ?></li></a>
             <?php endwhile; ?>
+            <?php if($GLOBALS['isRSS'] == 'on'): ?>
+                <a href="<?php $this->options->feedUrl(); ?>"><li>RSS</li></a>
+            <?php endif; ?>
             </div>
             <div id="search-box">
                 <form id="search" method="post" action="./" role="search">

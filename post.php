@@ -7,7 +7,7 @@
             <article class="posti" itemscope itemtype="http://schema.org/BlogPosting">
                 <h1 class="post-title" itemprop="name headline"><?php $this->title() ?></h1>
                 <div class="post-meta">
-                    <p>Written by <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a> with ♥ on <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time> in <?php $this->category(', '); ?></p>
+                    <p>Written by <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a> with ♥ on <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time> in <?php $this->category(', ', true, 'none'); ?></p>
                 </div>
 
                 <div class="post-content" itemprop="articleBody">
