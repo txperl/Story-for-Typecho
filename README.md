@@ -8,9 +8,11 @@
 
 Demo: [Yumoe](https://yumoe.com/).
 
-Version@[Halo](https://github.com/ruibaby/halo)：[story-halo](https://github.com/ruibaby/story-halo) by ruibaby, thanks.
+Version@[Halo](https://github.com/ruibaby/halo)：[story-halo](https://github.com/ruibaby/story-halo) by [ruibaby](https://github.com/ruibaby), thanks.
 
-Version@[纸小墨](https://www.chole.io/)：[ink-theme-story](https://github.com/akkuman/ink-theme-story) by akkuman, thanks.
+Version@[纸小墨](https://www.chole.io/)：[ink-theme-story](https://github.com/akkuman/ink-theme-story) by [akkuman](https://github.com/akkuman), thanks.
+
+Version@[VeriPress](https://github.com/veripress/veripress)：[Story-for-VeriPress](https://github.com/txperl/Story-for-VeriPress).
 
 ### Story v1@.0
 #### 预览图
