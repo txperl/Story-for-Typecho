@@ -83,7 +83,7 @@ body:before {
     content: '';
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.2;
+    opacity: 0.05;
     position: fixed;
     top: 0;
     left: 0;
