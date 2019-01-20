@@ -159,6 +159,17 @@ h6 {
     font-size: 0.7em;
     line-height: 1.5em;
 }
+code, p code {
+    padding: 3px 5px;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+}
+code, pre {
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    color: #444;
+}
 img {
     max-width: 100%;
     height: auto;
