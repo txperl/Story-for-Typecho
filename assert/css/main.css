@@ -136,11 +136,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
 }
 h1 {
-    font-size: 2.5em;
+    font-size: 1.75em;
     line-height: 1.5em;
 }
 h2 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 1.5em;
 }
 h3 {
@@ -167,7 +167,7 @@ code, p code {
     border-radius: 3px;
 }
 code, pre {
-    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-family: Monaco, Consolas, Menlo, "Courier New", monospace;
     color: #444;
 }
 img {
@@ -177,7 +177,7 @@ img {
     box-shadow: 0 2px 15px 0px rgba(0,0,0,0.1);
 }
 blockquote {
-    font-size: 0.8em;
+    font-size: 11px;
     display: block;
     border-width: 1px 0;
     border-style: solid;
