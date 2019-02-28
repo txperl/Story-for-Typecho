@@ -16,7 +16,7 @@ function sysInfo()
     $res['uptime'] .= $min."分钟";
     return $res;
 }if("show"==$sysReShow){
-    echo "本站已萌萌哒运行了".$sysInfo['uptime']."n";
-    echo "<br/>n";
+    echo "</br>本站已萌萌哒运行了".$sysInfo['uptime'].;
+    
 }
 ?>       
