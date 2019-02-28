@@ -7,9 +7,9 @@
             <div class="col-12">
                 &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
                 <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com/">Story+</a>'); ?>.
-                <?php if($GLOBALS['RUNTIME'] == JS) ?>
+                <?php if($GLOBALS['RUNTIME'] == JS): ?>
                 <p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>
-                <?php else if($GLOBALS['RUNTIME'] == PHP;) ?>
+                <?php else if($GLOBALS['RUNTIME'] == PHP;): ?>
                 <?php
                 $sysReShow = (false !== ($sysInfo = sysInfo()))?"show":"none";
                 function sysInfo()
@@ -31,7 +31,7 @@
                     echo "本站已萌萌哒运行了".$sysInfo['uptime']."n";
                     echo "<br/>n";
                 }
-                else return;
+                
                 ?>
 
             <?php endif ?>
