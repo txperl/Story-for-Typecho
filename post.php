@@ -15,14 +15,17 @@
                 </div>
                 <div>
                     <ul class="post-copyright">
-                      <li class="post-copyright-author">
+                      <li>
                           <strong>本文作者：</strong><?php $this->author(); ?>
                       </li>
-                      <li class="post-copyright-link">
+                      <li>
+                        <strong>发布时间：</strong><?php $this->date('F j, Y'); ?>
+                      </li>
+                      <li>
                         <strong>本文链接：</strong>
                         <a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->permalink() ?></a>
                     </li>
-                    <li class="post-copyright-license">
+                    <li>
                         <strong>版权声明： </strong>
                         本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
                     </li>
