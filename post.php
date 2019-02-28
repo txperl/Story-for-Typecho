@@ -16,7 +16,7 @@
                 <div>
                     <ul class="post-copyright">
                       <li class="post-copyright-author">
-                          <strong>本文作者：</strong><?php $this->anthor(); ?>
+                          <strong>本文作者：</strong><?php $this->author(); ?>
                       </li>
                       <li class="post-copyright-link">
                         <strong>本文链接：</strong>
