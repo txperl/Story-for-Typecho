@@ -10,7 +10,7 @@
                 <?php if($GLOBALS['RUNTIME'] == 'JS'):?>
                 <p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>
                 <?php elseif($GLOBALS['RUNTIME'] == 'PHP')
-                $this->need('time.php')
+                $this->need('time.php');
 
              endif ?>
         </div>
