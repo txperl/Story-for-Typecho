@@ -30,7 +30,9 @@
                 }if("show"==$sysReShow){
                     echo "本站已萌萌哒运行了".$sysInfo['uptime']."n";
                     echo "<br/>n";
-                }?>
+                }
+                else return;
+                ?>
 
             <?php endif ?>
         </div>
