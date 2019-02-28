@@ -7,12 +7,13 @@
             <div class="col-12">
                 &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
                 <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com/">Story+</a>'); ?>.
-                <?php if($GLOBALS['RUNTIME'] == 'JS'):?>
-                <p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>
-                <?php elseif($GLOBALS['RUNTIME'] == 'PHP')
-                $this->need('time.php');
+                <?php 
+                if($GLOBALS['RUNTIME'] == 'JS')
+                {echo "<p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>";}
+                elseif($GLOBALS['RUNTIME'] == 'PHP')
+                {$this->need('time.php');}
 
-             endif ?>
+             ?>
         </div>
     </div>
 </div>
