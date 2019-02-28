@@ -9,7 +9,8 @@
                 <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com/">Story+</a>'); ?>.
                 <?php 
                 if($GLOBALS['RUNTIME'] == 'JS')
-                {echo '<p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>';}
+                {   ?><script src="<?php $this->options->themeUrl('assert/js/extra.js');?>"></script><?php
+                    echo '<p>本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>';}
                 elseif($GLOBALS['RUNTIME'] == 'PHP')
                 {$this->need('time.php');}
 
@@ -22,7 +23,6 @@
 <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('assert/js/extra.js'); ?>"></script>
 <script>
     window.onload=function(){
         <?php if($GLOBALS['isAutoNav'] == 'on'): ?>
