@@ -7,4 +7,5 @@ $GLOBALS['isIconNav'] = 'off'; //将导航栏中的 1,2,3 替换成 Emoji 图标
 $GLOBALS['isRSS'] = 'on'; //在菜单栏中加入 RSS 按钮
 
 $GLOBALS['style_BG'] = 'https://api.paugram.com/wallpaper/'; //背景图设置。填入图片 URL 地址，留空为关闭
+$GLOBALS['shortcut_ico'] = 'https://tu-1252943311.cos.ap-shanghai.myqcloud.com/forest_128px_1215523_easyicon.net.ico' //填写网站图标地址
 ?>
