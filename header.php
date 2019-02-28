@@ -102,7 +102,7 @@ if ($GLOBALS['style_BG'] != '') {
                                     <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
                                 </form>
                             </div><br />
-                            <script src="<?php $this->options->themeUrl('assert/js/RemoveChinese.js') ?>"></script>
+                            <script src="<?php $this->options->themeUrl('assert/js/hitokoto.js') ?>"></script>
                             <script type="text/javascript" src="https://api.uixsj.cn/hitokoto/en.php?code=js"></script><script>enhitokoto()</script>                        
                         </div>
                     </div>

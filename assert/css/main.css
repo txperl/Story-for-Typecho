@@ -177,7 +177,7 @@ img {
     box-shadow: 0 2px 15px 0px rgba(0,0,0,0.1);
 }
 blockquote {
-    font-size: 11px;
+    font-size: 12px;
     display: block;
     border-width: 1px 0;
     border-style: solid;
@@ -244,7 +244,7 @@ blockquote ul, blockquote ol {
 .header-logo span.b {
     background: #414141;
     color: #fff;
-    
+
 }
 .header-logo span.b:hover {
     background: #555;

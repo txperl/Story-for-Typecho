@@ -8,6 +8,7 @@
 - 网站shortcut_ico(修改请到config.php)
 - CSS修改
 - 网站标题快速修改 (修改请到config.php)
+- 一言已增加(api来自https://uixsj.cn/1143.html)
 - etc.
 
 -----------
