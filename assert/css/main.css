@@ -722,3 +722,10 @@ blockquote ul, blockquote ol {
         margin-top: 22px;
     }
 }
+.post-copyright {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #ff1700;
+    background-color: #f9f9f9;
+    list-style: none;
+}

@@ -4,9 +4,9 @@
  * 爱上自已的故事，爱上别人的故事，交织着的，是美好，是快乐，是幸福。
  * 本项目属于 ProjectNatureSimple
  * 
- * @package Story
- * @author Trii Hsia
- * @version v1@.0 #20181113
+ * @package Story+
+ * @author Trii Hsia && yiny
+ * @version y1.0@
  * @link https://yumoe.com
  */
 

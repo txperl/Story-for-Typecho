@@ -7,6 +7,7 @@
         <div class="col-12">
             &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
             <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com/">Story</a>'); ?>.
+            <p style="color: grey;">本站已萌萌哒运行了 <span id="span_dt_dt"></span></p>
         </div>
         </div>
     </div>
@@ -15,6 +16,7 @@
 <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('assert/js/extra.js'); ?>"></script>
 <script>
     window.onload=function(){
 <?php if($GLOBALS['isAutoNav'] == 'on'): ?>
