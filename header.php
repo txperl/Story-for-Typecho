@@ -102,6 +102,7 @@ if ($GLOBALS['style_BG'] != '') {
                                     <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
                                 </form>
                             </div>
+                            <span><script type="text/javascript" src="https://api.uixsj.cn/hitokoto/en.php?code=js"></script><div id="enhitokoto"><script>enhitokoto()</script></div></span>
                         </div>
                     </div>
                 </div>

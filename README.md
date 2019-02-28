@@ -3,10 +3,11 @@
 添加内容:
 
 - 版权信息
-- 随机背景图
+- 随机动漫背景图(api由保罗提供)
 - 网站运行时间
-- 网站shortcut_ico
-- css修改
+- 网站shortcut_ico(修改请到config.php)
+- CSS修改
+- 网站标题快速修改 (修改请到config.php)
 - etc.
 
 -----------
