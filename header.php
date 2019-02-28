@@ -103,7 +103,7 @@ if ($GLOBALS['style_BG'] != '') {
                                 </form>
                             </div><br />
                             <script src="<?php $this->options->themeUrl('assert/js/RemoveChinese.js') ?>"></script>
-                            <script type="text/javascript" src="https://api.uixsj.cn/hitokoto/w.php?code=js"></script><div id="enhitokoto"><script>enhitokoto()</script></div>
+                            <script type="text/javascript" src="https://api.uixsj.cn/hitokoto/en.php?code=js"></script><script>enhitokoto()</script>                        
                         </div>
                     </div>
                 </div>
