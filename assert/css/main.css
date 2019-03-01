@@ -642,10 +642,37 @@ blockquote ul, blockquote ol {
     padding-left: 5px;
     color: #fff;
 }
+#postTorTree {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    text-align: right;
+}
 #torTree {
-    display: none;
-    margin-bottom: 2em;
     line-height: 1.5em;
+    margin-left: 6px;
+    border-left: 1px solid rgba(221, 221, 221, 0.32);
+    font-size: 12px;
+    position: fixed;
+    z-index: 0;
+    top: 100px;
+    display: inline-block;
+    text-align: left;
+}
+.torArcT {
+    width: 160px;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+.torArcTile {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    padding: 6px;
 }
 #torTree a {
     color: #333;
@@ -654,14 +681,19 @@ blockquote ul, blockquote ol {
     color: #555;
     background-color: #fff;
 }
+#torTree .tori {
+    font-weight: 600;
+}
 #torTree .tori:before {
     content: '# ';
+    color: #4caf50;
 }
 #torTree .torii {
-    margin-left: 1em;
+    margin-left: 0.5em;
 }
 #torTree .torii:before {
     content: '& ';
+    color: #546e7a;
 }
 .cPlayer img {
     max-width: 100%;
@@ -672,6 +704,12 @@ blockquote ul, blockquote ol {
     .post-list {
         width: 960px;
     } 
+}
+@media (max-width: 1024px){
+    #postTorTree {
+        display: none;
+        z-index: -999;
+    }
 }
 @media (max-width: 970px){
     .post-list {

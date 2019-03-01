@@ -23,7 +23,15 @@
                         <span><a href="<?php $this->options->siteUrl(); ?>">home</a></span>
                     </section>
                 </div>
+
                 <?php $this->need('comments.php'); ?>
+
+                <?php
+                  $torHTML = post_tor($this->content);
+                  if ($torHTML != '') {
+                    print_r('<div id="postTorTree"><div id="torTree" style="display: none;"><div class="torArcT"><div class="torArcTile">' . $torHTML . '</div></div></div></div>');
+                  }
+                ?>
             </article>
         </div>
     </div>
