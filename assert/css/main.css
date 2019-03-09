@@ -656,11 +656,13 @@ blockquote ul, blockquote ol {
     max-width: 100%;
 }
 
+.fixed-bottom {position: fixed;bottom: 0;width:100%;}
+
 @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}
 @media (max-width: 1300px){
     .post-list {
         width: 960px;
-    } 
+    }
 }
 @media (max-width: 970px){
     .post-list {
@@ -685,7 +687,7 @@ blockquote ul, blockquote ol {
 @media (max-width: 650px){
     .post-list {
         width: 100%;
-        
+
     }
     .post-list>li {
         width: 100%;
