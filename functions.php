@@ -75,13 +75,10 @@ function post_tor($content)
   }
 }
 
-function post_config($content)
+function parse_title($content)
 {
-  $rst = array();
-  preg_match_all('/<!-- isTorTree:(.*?); -->/', $content, $isTor);
-  if ($isTor[1][0] == 'on') {
-    $rst['isTorTree'] = 1;
-  }
-
-  return $rst;
+    preg_match_all('/<h([3-4])>(.*?)<\/h[3-4]>/', $content, $title);
+    if ($title != null) {
+        return 1;
+    } else return 0;
 }

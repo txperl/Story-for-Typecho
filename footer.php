@@ -18,8 +18,8 @@
 <script>
     window.onload = function(){
 <?php if ($this->is('post')): ?>
-<?php $postConfig = post_config($this->content); ?>
-<?php if ($postConfig['isTorTree']): ?>
+        <?php $postConfig = parse_title($this->content);?>
+        <?php if ($postConfig): ?>
         isMenu2('auto');
 <?php endif; ?>
 <?php endif; ?>
@@ -111,7 +111,7 @@
     function goBack(){
         window.history.back();
     }
-    
+
     function footerPosition(){
         $("footer").removeClass("fixed-bottom");
         var contentHeight = document.body.scrollHeight,
