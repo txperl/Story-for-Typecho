@@ -6,7 +6,7 @@
         <div class="row">
         <div class="col-12">
             &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-            <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com/">Story</a>'); ?>.
+            <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://github.com/txperl/Story-for-Typecho">Story</a>'); ?>.
         </div>
         </div>
     </div>
@@ -16,7 +16,18 @@
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
-    window.onload = function(){
+    $(document).ready(function() {
+        if (window.location.hash != '') {
+          var i=window.location.hash.indexOf('#comment');
+          var ii=window.location.hash.indexOf('#respond-post');
+          if (i != -1 || ii != -1) {
+            document.getElementById('btn-comments').innerText = 'hide comments';
+            document.getElementById('comments').style.display = 'block';
+          }
+        }
+    });
+
+    window.onload = function() {
 <?php if ($this->is('post')): ?>
 <?php $postConfig = post_config($this->content); ?>
 <?php if ($postConfig['isTorTree']): ?>
@@ -36,14 +47,6 @@
             document.getElementById('menu-search').setAttribute('placeholder','Search~');
         }
 <?php endif; ?>
-        if (window.location.hash != '') {
-          var i=window.location.hash.indexOf('#comment');
-          var ii=window.location.hash.indexOf('#respond-post');
-          if (i != '-1' || ii != '-1') {
-            document.getElementById('btn-comments').innerText = 'hide comments';
-            document.getElementById('comments').style.display = 'block';
-          }
-        }
     }
 
     function isMenu(){
@@ -121,12 +124,18 @@
             } else {
                 var winImgNum = 0;
             }
-        if(!(contentHeight > winHeight) && winImgNum <= 1){
+        if(!(contentHeight > winHeight) && winImgNum == 0){
             $("footer").addClass("fixed-bottom");
         }
     }
     footerPosition();
     $(window).resize(footerPosition);
+
+    function goToComment(){
+        document.getElementById('btn-comments').innerText = 'hide comments';
+        document.getElementById('comments').style.display = 'block';
+        window.location.hash = "#postFun";
+    }
 </script>
 
 <?php $this->footer(); ?>

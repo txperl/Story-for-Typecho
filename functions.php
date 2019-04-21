@@ -71,7 +71,7 @@ function post_tor($content)
   if ($num == 0) {
     return '';
   } else {
-    return '<a href="#main">Title</a><br>' . $f;
+    return '<a href="#main">Title</a><br>' . $f . '<a href="javascript:goToComment();">Comment</a>';
   }
 }
 

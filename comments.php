@@ -54,19 +54,19 @@ echo $commentClass;
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
             <div class="comment-inputs">
             <?php if($this->user->hasLogin()): ?>
-    		<p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
+            <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
             <?php else: ?>
                 <input type="text" name="author" id="comment-name" class="text" placeholder="<?php _e('name'); ?>" value="<?php $this->remember('author'); ?>" required />
                 
-    			<input type="email" name="mail" id="comment-mail" class="text" placeholder="<?php _e('mail'); ?>" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
+                <input type="email" name="mail" id="comment-mail" class="text" placeholder="<?php _e('mail'); ?>" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
 
-    			<input type="url" name="url" id="comment-url" class="text" placeholder="<?php _e('https://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
+                <input type="url" name="url" id="comment-url" class="text" placeholder="<?php _e('https://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
             <?php endif; ?>
             </div>
             <div class="comment-editor">
                 <textarea name="text" id="textarea" class="textarea" required onkeydown="if((event.ctrlKey||event.metaKey)&&event.keyCode==13){document.getElementById('submitComment').click();return false};"><?php $this->remember('text'); ?></textarea>
             </div>
-    		<div class="comment-buttons">
+            <div class="comment-buttons">
                 <div class="left">
                     <span>Edit with markdown</span>
                 </div>
@@ -74,14 +74,14 @@ echo $commentClass;
                     <button id="submitComment" type="submit" class="submit"><?php _e('Submit'); ?></button>
                 </div>
             </div>
-    	</form>
+        </form>
     </div>
     <?php else: ?>
     <h2><center><?php _e('抱歉，评论已关闭...'); ?></center></h2>
     <?php endif; ?>
 
     <?php if ($comments->have()): ?>
-	<h2><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h2>
+    <h2><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h2>
     
     <?php $comments->listComments(); ?>
 

@@ -14,7 +14,7 @@
                     <?php parseContnet($this->content); ?>
                 </div>
 
-                <div style="display:block;margin-bottom:2em;" class="clearfix">
+                <div id="postFun" style="display:block;margin-bottom:2em;" class="clearfix">
                     <section style="float:left;">
                         <span itemprop="keywords" class="tags"><?php _e('tag(s): '); ?><?php $this->tags(', ', true, 'none'); ?></span>
                     </section>

@@ -49,36 +49,36 @@ body,footer {
     font-weight: 400;
     line-height: 2em;
 }
-    @media screen and (min-width: 1681px) {
-        body p,footer p {
-            font-size: 12pt;
-        }
+@media screen and (min-width: 1681px) {
+    body p, footer p {
+        font-size: 12pt;
     }
-    @media screen and (max-width: 1680px) {
-        body,footer {
-            font-size: 11pt;
-        }
+}
+@media screen and (max-width: 1680px) {
+    body, footer {
+        font-size: 11pt;
     }
-    @media screen and (max-width: 1280px) {
-        body,footer {
-            font-size: 11pt;
-        }
+}
+@media screen and (max-width: 1280px) {
+    body, footer {
+        font-size: 11pt;
     }
-    @media screen and (max-width: 980px) {
-        body,footer {
-            font-size: 12pt;
-        }
+}
+@media screen and (max-width: 980px) {
+    body, footer {
+        font-size: 12pt;
     }
-    @media screen and (max-width: 736px) {
-        body,footer {
-            font-size: 12pt;
-        }
+}
+@media screen and (max-width: 736px) {
+    body, footer {
+        font-size: 12pt;
     }
-    @media screen and (max-width: 480px) {
-        body,footer {
-            font-size: 12pt;
-        }
+}
+@media screen and (max-width: 480px) {
+    body, footer {
+        font-size: 12pt;
     }
+}
 body:before {
     content: '';
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@ blockquote ul, blockquote ol {
 }
 #footer {
     text-align: center;
-    margin: 1.5em;
+    padding: 1.5em;
     background-color: transparent;
 }
 .logo {
@@ -679,7 +679,7 @@ blockquote ul, blockquote ol {
 }
 #torTree a:hover{
     color: #555;
-    background-color: #fff;
+    background-color: #fff0;
 }
 #torTree .tori {
     font-weight: 600;
@@ -698,8 +698,11 @@ blockquote ul, blockquote ol {
 .cPlayer img {
     max-width: 100%;
 }
-
-.fixed-bottom {position: fixed;bottom: 0;width:100%;}
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
 
 @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}
 @media (max-width: 1300px){
