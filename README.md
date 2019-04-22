@@ -43,7 +43,7 @@ $GLOBALS['style_BG'] = ''; //背景图设置。填入图片 URL 地址，留空�
 若您觉得 1,2,3 太抽象，可以将 `config.php` 中 `$GLOBALS['isIconNav']` 设置为 `on` 即可替换成相应 Emoji 图标。
 
 ##### 网站标题修改
-本主题要修改标题必须自行修改代码...位于 `header.php` 的 `class .header-logo(54行处)` ，用 `<span class="b"></span>` 及 `<span class="w"></span>` 把自已的站点标题拼接出来就行了，其他可以不做修改。
+本主题要修改标题必须自行修改代码...位于 `header.php` 的 `class .header-logo(56行处)` ，用 `<span class="b"></span>` 及 `<span class="w"></span>` 把自已的站点标题拼接出来就行了，其他可以不做修改。
 
 ##### 修改网站标题后菜单定位
 您可以将 `config.php` 中 `$GLOBALS['isAutoNav']` 设置为 `on` 即可自动调整，无需进行以下操作。

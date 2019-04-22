@@ -19,7 +19,7 @@
                         <span itemprop="keywords" class="tags"><?php _e('tag(s): '); ?><?php $this->tags(', ', true, 'none'); ?></span>
                     </section>
                     <section style="float:right;">
-                        <span><a id="btn-comments" href="javascript:isComments();">show comments</a></span> · <span><a href="javascript:goBack();">back</a></span> · 
+                        <span><a id="btn-comments" href="javascript:isComments();">show comments</a></span> · <span><a href="javascript:goBack();">back</a></span> ·
                         <span><a href="<?php $this->options->siteUrl(); ?>">home</a></span>
                     </section>
                 </div>
@@ -27,10 +27,10 @@
                 <?php $this->need('comments.php'); ?>
 
                 <?php
-                  $torHTML = post_tor($this->content);
-                  if ($torHTML != '') {
+                $torHTML = post_tor($this->content);
+                if ($torHTML != '') {
                     print_r('<div id="postTorTree"><div id="torTree" style="display: none;"><div class="torArcT"><div class="torArcTile">' . $torHTML . '</div></div></div></div>');
-                  }
+                }
                 ?>
             </article>
         </div>
