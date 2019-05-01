@@ -102,6 +102,7 @@
             document.getElementById('btn-comments').innerText = 'show comments';
             document.getElementById('comments').style.display = 'none';
         }
+        footerPosition();
     }
 
     function Search404() {

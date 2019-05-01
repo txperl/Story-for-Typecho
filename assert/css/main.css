@@ -701,7 +701,7 @@ blockquote ul, blockquote ol {
 .fixed-bottom {
     position: fixed;
     bottom: 0;
-    width:100%;
+    width: 100%;
 }
 
 @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}
