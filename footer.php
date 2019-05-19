@@ -23,6 +23,7 @@
             if (i != -1 || ii != -1) {
                 document.getElementById('btn-comments').innerText = 'hide comments';
                 document.getElementById('comments').style.display = 'block';
+                footerPosition();
             }
         }
     });
