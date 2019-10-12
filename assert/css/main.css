@@ -380,6 +380,9 @@ blockquote ul, blockquote ol {
     height: auto;
     margin: 0 5%;
 }
+.posti pre code {
+    padding: 0;
+}
 .nav-page {
     margin: 3em auto 2em auto;
 }
