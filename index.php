@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 每个人都有属于自已的故事，我们编织着、叙述着，只为了那个必定动人的结局。
  * 爱上自已的故事，爱上别人的故事，交织着的，是美好，是快乐，是幸福。
@@ -6,7 +7,7 @@
  * 
  * @package Story
  * @author Trii Hsia
- * @version v1@.0 #20190422
+ * @version v1@.1
  * @link https://yumoe.com
  */
 
