@@ -13,10 +13,10 @@ function parseContnet($content)
         $f = $title[2][$i];
         $type = $title[1][$i];
         if ($type == '3') {
-            $ff = '<h3 id="anchor-' . $i . '">' . $f . '</h3>';
+            $ff = '<h3 id="anchor-' . $i . '" class="torAn">' . $f . '</h3>';
         }
         if ($type == '4') {
-            $ff = '<h4 id="anchor-' . $i . '">' . $f . '</h4>';
+            $ff = '<h4 id="anchor-' . $i . '" class="torAn">' . $f . '</h4>';
         }
         array_push($ftitle, $ff);
     }
@@ -61,7 +61,7 @@ function post_tor($content)
     preg_match_all('/<h[3-4]>(.*?)<\/h[3-4]>/', $content, $tor_i);
     $num = count($tor_i[0]);
     for ($i = 0; $i < $num; $i++) {
-        $a = '<a href="#anchor-' . $i . '">' . $tor_i[0][$i] . '</a>';
+        $a = '<a id="tor-' . $i . '" class="torList" href="#anchor-' . $i . '">' . $tor_i[0][$i] . '</a>';
         $f = $f . $a;
     }
     $f = str_replace('<h3>', '<span class="tori">', $f);
@@ -77,10 +77,12 @@ function post_tor($content)
 
 function post_config($content)
 {
-    $rst = array();
+    $rst = ['isTorTree' => (($GLOBALS['isTorTree'] == 'on') ? 1 : 0)];
     preg_match_all('/<!-- isTorTree:(.*?); -->/', $content, $isTor);
     if ($isTor[1][0] == 'on') {
         $rst['isTorTree'] = 1;
+    } else if ($isTor[1][0] == 'off') {
+        $rst['isTorTree'] = 0;
     }
 
     return $rst;

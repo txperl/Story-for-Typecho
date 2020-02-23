@@ -835,6 +835,10 @@ blockquote ul, blockquote ol {
     padding: 6px;
 }
 
+#torTree .on {
+    color: #dc3545;
+}
+
 #torTree a {
     color: #333;
 }

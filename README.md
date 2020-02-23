@@ -29,6 +29,7 @@ Story 包含一个全局配置文件。
 $GLOBALS['isAutoNav'] = 'off'; //自动设置导航栏中 margin 及 width 值（推荐开启）
 $GLOBALS['isIconNav'] = 'off'; //将导航栏中的 1,2,3 替换成 Emoji 图标
 $GLOBALS['isRSS'] = 'off'; //在菜单栏中加入 RSS 按钮
+$GLOBALS['isTorTree'] = 'off'; //默认显示文章导航树
 
 $GLOBALS['style_BG'] = ''; //背景图设置。填入图片 URL 地址，留空为关闭
 ```
@@ -49,8 +50,10 @@ $GLOBALS['style_BG'] = ''; //背景图设置。填入图片 URL 地址，留空�
 #### 背景图设置
 若要设置背景图，请修改位于 `config.php` 的 `$GLOBALS['style_BG']` 变量值。改为图片链接即可，留空即为关闭。
 
-#### 默认显示导航树
-若要文章默认直接显示导航树，请在文章任意位置（推荐开头）添加 `<!-- isTorTree:on; -->` 。值得一提的是，当页面宽度小于 1024px ，导航树将不再显示。
+#### 导航树
+若要默认显示导航树，请修改位于 `config.php` 的 `$GLOBALS['isTorTree']` 变量值。
+
+若手动控制，请在文章任意位置（推荐开头）添加 `<!-- isTorTree:on; -->` 或 `<!-- isTorTree:off; -->` 。值得一提的是，当页面宽度小于 1024px ，导航树将不再显示。
 
 #### 其他
 以上的特别说明如果有很多人介意的话，应该还是会写个配置文件然后用 PHP 自动生成修改的...

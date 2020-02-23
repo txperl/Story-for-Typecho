@@ -16,6 +16,20 @@
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
+    <?php if ($GLOBALS['isAutoNav'] == 'on') : ?>
+        var b = document.getElementsByClassName('b');
+        var w = document.getElementsByClassName('w');
+        var menupgMargin = (b.length + w.length) * 28;
+        var srhboxMargin = (b.length + w.length + 3) * 28;
+        var menusrhWidth = (b.length + w.length - 1) * 28;
+        document.getElementById('menu-page').style['margin-left'] = menupgMargin + 'px';
+        document.getElementById('search-box').style['margin-left'] = srhboxMargin + 'px';
+        document.getElementById('menu-search').style['width'] = menusrhWidth + 'px';
+        if (menusrhWidth < 140) {
+            document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
+        }
+    <?php endif; ?>
+
     $(document).ready(function() {
         if (window.location.hash != '') {
             var i = window.location.hash.indexOf('#comment');
@@ -27,28 +41,6 @@
             }
         }
     });
-
-    window.onload = function() {
-        <?php if ($this->is('post')) : ?>
-            <?php $postConfig = post_config($this->content); ?>
-            <?php if ($postConfig['isTorTree']) : ?>
-                isMenu2('auto');
-            <?php endif; ?>
-        <?php endif; ?>
-        <?php if ($GLOBALS['isAutoNav'] == 'on') : ?>
-            var b = document.getElementsByClassName('b');
-            var w = document.getElementsByClassName('w');
-            var menupgMargin = (b.length + w.length) * 28;
-            var srhboxMargin = (b.length + w.length + 3) * 28;
-            var menusrhWidth = (b.length + w.length - 1) * 28;
-            document.getElementById('menu-page').style['margin-left'] = menupgMargin + 'px';
-            document.getElementById('search-box').style['margin-left'] = srhboxMargin + 'px';
-            document.getElementById('menu-search').style['width'] = menusrhWidth + 'px';
-            if (menusrhWidth < 140) {
-                document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
-            }
-        <?php endif; ?>
-    }
 
     function isMenu() {
         if (document.getElementById('menu-1').style.display == 'inline') {
@@ -138,6 +130,32 @@
         document.getElementById('comments').style.display = 'block';
         window.location.hash = "#postFun";
     }
+
+    <?php if ($this->is('post')) : ?>
+        <?php $postConfig = post_config($this->content); ?>
+        <?php if ($postConfig['isTorTree']) : ?>
+            isMenu2('auto');
+        <?php endif; ?>
+
+        var $navs = $('.torList'),
+            $sections = $('.torAn'),
+            $window = $(window),
+            navLength = $navs.length - 1;
+
+        $window.on('scroll', function() {
+            var scrollTop = $window.scrollTop(),
+                len = navLength;
+
+            for (; len > -1; len--) {
+                var that = $sections.eq(len);
+                if (scrollTop >= (that.offset().top - 100)) {
+                    $navs.removeClass('on').eq(len).addClass('on');
+                    break;
+                }
+                $navs.removeClass('on');
+            }
+        });
+    <?php endif; ?>
 </script>
 
 <?php $this->footer(); ?>
