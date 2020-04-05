@@ -866,6 +866,56 @@ blockquote ul, blockquote ol {
     color: #546e7a;
 }
 
+#indexIITor {
+    line-height: 1.5em;
+    max-width: 200px;
+    font-size: 16px;
+    position: fixed;
+    z-index: 0;
+    top: 100px;
+    display: inline-block;
+    text-align: left;
+    word-break: break-word;
+}
+
+#indexIITor a {
+    color: #6c757d;
+}
+
+#indexIITor a::before {
+    content: "#";
+    color: rgba(255, 82, 82, 0.8);
+    color: #ff5252cc;
+}
+
+#indexIIList h4::before {
+    content: none;
+}
+
+#indexIIList a {
+    color: #484848;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#indexIIList li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+}
+
+#indexIIList span {
+    display: block;
+    font-size: 14px;
+    color: #ced4da;
+}
+
+#indexIIList span a {
+    font-size: 14px;
+    color: #6c757d;
+}
+
 .cPlayer img {
     max-width: 100%;
 }
@@ -930,6 +980,9 @@ blockquote ul, blockquote ol {
         width: 100%;
         margin: 0 0 20px 0;
         padding: 0 20px;
+    }
+    #indexIIList ul {
+        padding-left: .5em;
     }
 }
 

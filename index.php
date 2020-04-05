@@ -7,7 +7,7 @@
  * 
  * @package Story
  * @author Trii Hsia
- * @version v1@.1
+ * @version v1@.11
  * @link https://yumoe.com
  */
 
@@ -25,7 +25,7 @@ $this->need('header.php');
                             <h3 class="post-title"><time class="index-time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('M j, Y'); ?></time><br><?php $this->title() ?></h3>
                             <?php if ($this->category) : ?>
                                 <div class="post-meta">
-                                    <?php echo $this->category; ?>
+                                    <?php echo $this->category(', ', false); ?>
                                 </div>
                             <?php endif; ?>
                         </a>
