@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="post-content" itemprop="articleBody">
-                    <?php parseContnet($this->content); ?>
+                    <?php parseContent($this->content); ?>
                 </div>
 
                 <div id="postFun" style="display:block;margin-bottom:2em;" class="clearfix">

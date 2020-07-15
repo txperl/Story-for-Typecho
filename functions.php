@@ -1,6 +1,7 @@
 <?php
 ini_set("error_reporting", "E_ALL & ~E_NOTICE");
-function parseContnet($content)
+
+    function parseContent($content)
 {
     //解析文章 暂只是添加 h3,h4 锚点，为 <img> 添加 data-action
 
