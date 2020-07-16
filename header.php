@@ -19,22 +19,25 @@ if ($GLOBALS['style_BG'] != '') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <?php if ($this->options->favicon): ?><link rel="shortcut icon" href="<?php $this->options->favicon(); ?>"><?php endif; ?>
+    <?php if ($this->options->iOSIcon): ?><link rel="apple-touch-icon" href="<?php $this->options->iOSIcon(); ?>"><?php endif; ?>
     <title><?php $this->archiveTitle(array(
-                'category'  =>  _t('%s'),
-                'search'    =>  _t('%s'),
-                'tag'       =>  _t('%s'),
-                'author'    =>  _t('%s')
-            ), '', ' - '); ?><?php $this->options->title(); ?></title>
+            'category' => _t('%s'),
+            'search'   => _t('%s'),
+            'tag'      => _t('%s'),
+            'author'   => _t('%s')
+        ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
     <link type="text/css" rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/prism.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/zoom.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/main.css'); ?>">
-    <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+    <?php if ($this->options->isIconNav == 'on'): ?>
         <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/twemoji-awesome.css'); ?>">
     <?php endif; ?>
-
     <!--[if lt IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
@@ -67,21 +70,21 @@ if ($GLOBALS['style_BG'] != '') {
                             <span class="b">·</span>
                         </a>
                         <a href="javascript:isMenu1();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav == 'on') : ?>
                                 <span id="menu-1" class="bf"><i class="twa twa-flags"></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav == 'on') : ?>
                                 <span id="menu-2" class="bf"><i class="twa twa-evergreen-tree"></i></span>
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu3();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav == 'on') : ?>
                                 <span id="menu-3" class="bf"><i class="twa twa-mag"></i></span>
                             <?php else : ?>
                                 <span id="menu-3" class="bf">3</span>
@@ -95,7 +98,7 @@ if ($GLOBALS['style_BG'] != '') {
                                 <li><?php $pages->title(); ?></li>
                             </a>
                         <?php endwhile; ?>
-                        <?php if ($GLOBALS['isRSS'] == 'on') : ?>
+                        <?php if ($this->options->isRSS == 'on') : ?>
                             <a href="<?php $this->options->feedUrl(); ?>">
                                 <li>RSS</li>
                             </a>

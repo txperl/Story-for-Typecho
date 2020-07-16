@@ -1,7 +1,48 @@
 <?php
 ini_set("error_reporting", "E_ALL & ~E_NOTICE");
+/**
+ * 主题配置
+ * @param $form
+ */
+function themeConfig($form)
+{
+    // 导航栏自适应
+    $isAutoNav = new Typecho_Widget_Helper_Form_Element_Radio('isAutoNav',
+        array('on' => _t('开启'),
+            'off' => _t('关闭'),
+        ), 'off', _t('导航栏自适应'), _t('默认关闭，开启后自动设置导航栏中 <code>margin</code> 及 <code>width</code> 值（推荐开启）。'));
+    $form->addInput($isAutoNav);
+    // 表情替换数字
+    $isIconNav = new Typecho_Widget_Helper_Form_Element_Radio('isIconNav',
+        array('on' => _t('开启'),
+            'off' => _t('关闭'),
+        ), 'off', _t('表情替换数字'), _t('默认关闭，开启后将导航栏中的 1,2,3 替换成 Emoji 图标。'));
+    $form->addInput($isIconNav);
+    // 开启订阅功能
+    $isRSS = new Typecho_Widget_Helper_Form_Element_Radio('isRSS',
+        array('on' => _t('开启'),
+            'off' => _t('关闭'),
+        ), 'off', _t('RSS 订阅'), _t('默认关闭，在菜单栏中加入 RSS 按钮。'));
+    $form->addInput($isRSS);
+    // 文章导航树
+    $isTorTree = new Typecho_Widget_Helper_Form_Element_Radio('isTorTree',
+        array('on' => _t('开启'),
+            'off' => _t('关闭'),
+        ), 'off', _t('文章导航树'), _t('默认关闭，开启后将默认显示文章导航树。'));
+    $form->addInput($isTorTree);
+    // 背景图片
+    $style_BG = new Typecho_Widget_Helper_Form_Element_Text('style_BG',
+        NULL, NULL, _t('背景图设置'), _t('填入图片 URL 地址，留空为关闭。'));
+    $form->addInput($style_BG->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
+    // favicon
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('Favicon 地址'), _t('一般为 http://www.domain.com/favicon.ico，支持 https:// 或 //（自适应），留空则不设置'));
+    $form->addInput($favicon->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
+    // 苹果标准
+    $iOSIcon = new Typecho_Widget_Helper_Form_Element_Text('iOSIcon', NULL, NULL, _t('Apple Touch Icon 地址'), _t('一般为 http://www.domain.com/image.png，支持 https:// 或 //（自适应），留空则不设置'));
+    $form->addInput($iOSIcon->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
+}
 
-    function parseContent($content)
+function parseContent($content)
 {
     //解析文章 暂只是添加 h3,h4 锚点，为 <img> 添加 data-action
 
