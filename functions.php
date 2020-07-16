@@ -119,7 +119,7 @@ function post_tor($content)
 
 function post_config($content)
 {
-    $rst = ['isTorTree' => (($GLOBALS['isTorTree'] == 'on') ? 1 : 0)];
+    $rst = ['isTorTree' => (($this->options->isTorTree == 'on') ? 1 : 0)];
     preg_match_all('/<!-- isTorTree:(.*?); -->/', $content, $isTor);
     if ($isTor[1][0] == 'on') {
         $rst['isTorTree'] = 1;
