@@ -1,17 +1,21 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
-<?php
-require_once 'config.php';
-if ($GLOBALS['style_BG'] != '') {
-    echo '<style>';
-    echo "\n";
-    echo 'body{background: #fff;}body::before {background: url(' . $GLOBALS['style_BG'] . ') center/cover no-repeat;}blockquote::before {background: transparent !important;}';
-    echo "\n";
-    echo '</style>';
-    echo "\n";
-}
-?>
+<?php if($this->options->backGroundImg): ?>
+    <style>
+        body {
+            background: #fff;
+        }
+
+        body::before {
+            background: url(<?php $this->options->backGroundImg(); ?>) center/cover no-repeat;
+        }
+
+        blockquote::before {
+            background: transparent !important;
+        }
+    </style>
+<?php endif;?>
 <html>
 
 <head>

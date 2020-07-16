@@ -31,14 +31,16 @@ function themeConfig($form)
         ), 'off', _t('文章导航树'), _t('默认关闭，开启后将默认显示文章导航树。'));
     $form->addInput($isTorTree);
     // 背景图片
-    $style_BG = new Typecho_Widget_Helper_Form_Element_Text('style_BG',
+    $backGroundImg = new Typecho_Widget_Helper_Form_Element_Text('backGroundImg',
         NULL, NULL, _t('背景图设置'), _t('填入图片 URL 地址，留空为关闭。'));
-    $form->addInput($style_BG->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
+    $form->addInput($backGroundImg->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
     // favicon
-    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('Favicon 地址'), _t('一般为 http://www.domain.com/favicon.ico，支持 https:// 或 //（自适应），留空则不设置'));
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon',
+        NULL, NULL, _t('Favicon 地址'), _t('一般为 http://www.domain.com/favicon.ico，支持 https:// 或 //（自适应），留空则不设置'));
     $form->addInput($favicon->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
     // 苹果标准
-    $iOSIcon = new Typecho_Widget_Helper_Form_Element_Text('iOSIcon', NULL, NULL, _t('Apple Touch Icon 地址'), _t('一般为 http://www.domain.com/image.png，支持 https:// 或 //（自适应），留空则不设置'));
+    $iOSIcon = new Typecho_Widget_Helper_Form_Element_Text('iOSIcon',
+        NULL, NULL, _t('Apple Touch Icon 地址'), _t('一般为 http://www.domain.com/image.png，支持 https:// 或 //（自适应），留空则不设置'));
     $form->addInput($iOSIcon->addRule('xssCheck', _t('请不要在 URL 中使用特殊字符')));
 }
 
