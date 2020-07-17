@@ -132,8 +132,7 @@
     }
 
     <?php if ($this->is('post')) : ?>
-        <?php $postConfig = post_config($this->content); ?>
-        <?php if ($postConfig['isTorTree']) : ?>
+        <?php if ($this->options->isTorTree == 'on') : ?>
             isMenu2('auto');
         <?php endif; ?>
 
