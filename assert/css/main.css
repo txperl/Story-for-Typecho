@@ -37,12 +37,8 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
     height: 40px;
-    background-color: #eee;
-    border-radius: 16px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
     background-color: #ddd;
+    border-radius: 16px;
 }
 
 ::selection {
@@ -394,6 +390,20 @@ blockquote ul, blockquote ol {
 .post-list>li .post-link:hover .post-meta {
     background: rgba(255, 82, 82, 0.8);
     background: #ff5252cc;
+}
+
+.post-list>li .cover {
+    -webkit-filter: grayscale(60%);
+    -moz-filter: grayscale(60%);
+    -ms-filter: grayscale(60%);
+    -o-filter: grayscale(60%);
+    filter: grayscale(60%);
+    filter: gray;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
 }
 
 .posti {

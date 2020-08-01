@@ -1,11 +1,10 @@
 <?php
 ini_set("error_reporting", "E_ALL & ~E_NOTICE");
 
-    function parseContent($content)
+// 解析文章：暂只是添加 h3,h4 锚点，为 <img> 添加 data-action
+function parseContent($content)
 {
-    //解析文章 暂只是添加 h3,h4 锚点，为 <img> 添加 data-action
-
-    //添加 h3,h4 锚点
+    // 添加 h3,h4 锚点
     $ftitle = array();
     preg_match_all('/<h([3-4])>(.*?)<\/h[3-4]>/', $content, $title);
     $num = count($title[0]);
@@ -25,7 +24,7 @@ ini_set("error_reporting", "E_ALL & ~E_NOTICE");
         $content = str_replace_limit($title[0][$i], $ftitle[$i], $content);
     }
 
-    //<img> 添加 data-action
+    // <img> 添加 data-action
     $fimg = array();
     preg_match_all('/<img (.*?)>/', $content, $img);
     $num = count($img[0]);
@@ -61,28 +60,32 @@ function post_tor($content)
     $f = '';
     preg_match_all('/<h[3-4]>(.*?)<\/h[3-4]>/', $content, $tor_i);
     $num = count($tor_i[0]);
-    for ($i = 0; $i < $num; $i++) {
-        $a = '<a id="tor-' . $i . '" class="torList" href="#anchor-' . $i . '">' . $tor_i[0][$i] . '</a>';
-        $f = $f . $a;
-    }
-    $f = str_replace('<h3>', '<span class="tori">', $f);
-    $f = str_replace('</h3>', '</span><br>', $f);
-    $f = str_replace('<h4>', '<span class="torii">', $f);
-    $f = str_replace('</h4>', '</span><br>', $f);
+
     if ($num == 0) {
         return '';
     } else {
+        for ($i = 0; $i < $num; $i++) {
+            $a = '<a id="tor-' . $i . '" class="torList" href="#anchor-' . $i . '">' . $tor_i[0][$i] . '</a>';
+            $f = $f . $a;
+        }
+        $f = str_replace('<h3>', '<span class="tori">', $f);
+        $f = str_replace('</h3>', '</span><br>', $f);
+        $f = str_replace('<h4>', '<span class="torii">', $f);
+        $f = str_replace('</h4>', '</span><br>', $f);
+
         return '<a href="#main">Title</a><br>' . $f . '<a href="javascript:goToComment();">Comment</a>';
     }
 }
 
-function post_config($content)
+function post_config($thiss)
 {
+    $content = $thiss->content;
     $rst = ['isTorTree' => (($GLOBALS['isTorTree'] == 'on') ? 1 : 0)];
     preg_match_all('/<!-- isTorTree:(.*?); -->/', $content, $isTor);
-    if ($isTor[1][0] == 'on') {
+
+    if (@$thiss->fields->tor == 'on' || $isTor[1][0] == 'on') {
         $rst['isTorTree'] = 1;
-    } else if ($isTor[1][0] == 'off') {
+    } else if (@$thiss->fields->tor == 'off' || $isTor[1][0] == 'off') {
         $rst['isTorTree'] = 0;
     }
 

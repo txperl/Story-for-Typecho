@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-</div><!-- end #body -->
+</div>
+<!-- end #body -->
 
 <footer id="footer" role="contentinfo">
     <div class="container-fluid">
@@ -74,7 +75,7 @@
             }
         } else {
             if (c != 'auto') {
-                alert('人家是导航树哦！只有在特定的文章页面才会出现。');
+                alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
             }
         }
     }
@@ -132,7 +133,7 @@
     }
 
     <?php if ($this->is('post')) : ?>
-        <?php $postConfig = post_config($this->content); ?>
+        <?php $postConfig = post_config($this); ?>
         <?php if ($postConfig['isTorTree']) : ?>
             isMenu2('auto');
         <?php endif; ?>

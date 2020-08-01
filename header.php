@@ -6,7 +6,7 @@ require_once 'config.php';
 if ($GLOBALS['style_BG'] != '') {
     echo '<style>';
     echo "\n";
-    echo 'body{background: #fff;}body::before {background: url(' . $GLOBALS['style_BG'] . ') center/cover no-repeat;}blockquote::before {background: transparent !important;}';
+    echo 'body{ background: #fff; } body::before{ background: url(' . $GLOBALS['style_BG'] . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
     echo "\n";
     echo '</style>';
     echo "\n";
