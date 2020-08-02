@@ -32,7 +32,7 @@ if ($GLOBALS['style_BG'] != '') {
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/zoom.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/main.css'); ?>">
     <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
-        <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/twemoji-awesome.css'); ?>">
+        <link type="text/css" rel="stylesheet" href="<?php echo "https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/all.min.css" ?>">
     <?php endif; ?>
 
     <!--[if lt IE 9]>
@@ -64,25 +64,25 @@ if ($GLOBALS['style_BG'] != '') {
                         <span class="b">E</span>
                         <!-- 标题结束 -->
                         <a id="btn-menu" href="javascript:isMenu();">
-                            <span class="b">·</span>
+                            <span class="b"><i class="fas fa-bars"></i></span>
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
-                                <span id="menu-1" class="bf"><i class="twa twa-flags"></i></span>
+                                <span id="menu-1" class="bf"><i class="fas fa-caret-square-down"></i></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
                             <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
-                                <span id="menu-2" class="bf"><i class="twa twa-evergreen-tree"></i></span>
+                                <span id="menu-2" class="bf"><i class="fas fa-stream"></i></span>
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu3();">
                             <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
-                                <span id="menu-3" class="bf"><i class="twa twa-mag"></i></span>
+                                <span id="menu-3" class="bf"><i class="fas fa-search"></i></span>
                             <?php else : ?>
                                 <span id="menu-3" class="bf">3</span>
                             <?php endif; ?>

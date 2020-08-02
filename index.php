@@ -4,7 +4,7 @@
  * 每个人都有属于自已的故事，我们编织着、叙述着，只为了那个必定动人的结局。
  * 爱上自已的故事，爱上别人的故事，交织着的，是美好，是快乐，是幸福。
  * 本项目属于 ProjectNatureSimple
- * 
+ *
  * @package Story
  * @author Trii Hsia
  * @version v1@.2
@@ -21,12 +21,9 @@ $this->need('header.php');
             <ul class="post-list clearfix">
                 <?php while ($this->next()) : ?>
                     <li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-                        <?php
-                        if (@$this->fields->cover) {
-                            echo '<span class="cover" style="background: url(' . $this->fields->cover . ') center/cover no-repeat;"></span>';
-                        }
-                        ?>
-                        <a class="post-link" href="<?php $this->permalink() ?>">
+                        <a class="post-link" href="<?php $this->permalink() ?>" <?php if (@$this->fields->cover) {
+                                                                                    echo 'style="background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(' . $this->fields->cover . ')center/cover no-repeat"';
+                                                                                } ?>>
                             <h3 class="post-title"><time class="index-time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('M j, Y'); ?></time><br><?php $this->title() ?></h3>
                             <?php if ($this->category) : ?>
                                 <div class="post-meta">
