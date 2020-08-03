@@ -57,7 +57,7 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 您可以将 `config.php` 中 `$GLOBALS['isAutoNav']` 设置为 `on` 即可自动调整，无需进行以下操作。
 
-若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(775行处)` 及 `#search-box(797行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
+若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(777行处)` 及 `#search-box(799行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
 
 #### 背景图
 
@@ -87,8 +87,6 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 #### 其他
 
-以上的特别说明如果有很多人介意的话，应该还是会写个配置文件然后用 PHP 自动生成修改的... 
-
 其他没有特别说明的基本不需要修改，当然你也可以按照个人兴趣随意修改。
 
 若有什么不清楚可以给我发邮件或是到[主题发布页](https://yumoe.com/archives/story.html)&GitHub询问。
@@ -97,8 +95,8 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 #### 感谢
 
-* [Art Chen](https://about.me/hermitage)-[Artifact.me](https://artifact.me/)-[Element](https://github.com/artchen/hexo-theme-element) 主题首页样式参考（获得许可）
-* [Jimmy](https://jimmycai.com/) Yellow 主题评论框参考（获得许可）
+* [Art Chen](https://about.me/hermitage)-[Artifact.me](https://artifact.me/)-[Element](https://github.com/artchen/hexo-theme-element) 主题首页样式参考（获得许可）以及部分代码引用
+* [Jimmy](https://jimmycai.com/) Yellow 主题评论框参考以及部分代码引用（获得许可）
 
 #### 许可
 
