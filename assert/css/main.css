@@ -392,6 +392,22 @@ blockquote ul, blockquote ol {
     background: #ff5252cc;
 }
 
+.post-list>li .cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    -webkit-filter: grayscale(60%);
+    -moz-filter: grayscale(60%);
+    -ms-filter: grayscale(60%);
+    -o-filter: grayscale(60%);
+    filter: grayscale(60%);
+    filter: gray;
+    opacity: 0.1;
+}
+
 .posti {
     position: relative;
     width: 100%;

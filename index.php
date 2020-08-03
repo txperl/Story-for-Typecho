@@ -7,7 +7,7 @@
  *
  * @package Story
  * @author Trii Hsia
- * @version v1@.2
+ * @version v1@.21
  * @link https://yumoe.com
  */
 
@@ -21,9 +21,12 @@ $this->need('header.php');
             <ul class="post-list clearfix">
                 <?php while ($this->next()) : ?>
                     <li class="post-item grid-item" itemscope itemtype="http://schema.org/BlogPosting">
-                        <a class="post-link" href="<?php $this->permalink() ?>" <?php if (@$this->fields->cover) {
-                                                                                    echo 'style="background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(' . $this->fields->cover . ')center/cover no-repeat"';
-                                                                                } ?>>
+                        <a class="post-link" href="<?php $this->permalink() ?>">
+                            <?php
+                            if (@$this->fields->cover) {
+                                echo '<span class="cover" style="background: url(' . $this->fields->cover . ') center/cover no-repeat;"></span>';
+                            }
+                            ?>
                             <h3 class="post-title"><time class="index-time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('M j, Y'); ?></time><br><?php $this->title() ?></h3>
                             <?php if ($this->category) : ?>
                                 <div class="post-meta">
