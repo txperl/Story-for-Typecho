@@ -2,10 +2,10 @@
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
 <?php
-if ($this->options->isIconNav) {
+if ($this->options->style_BG) {
     echo '<style>';
     echo "\n";
-    echo 'body{ background: #fff; } body::before{ background: url(' .  $this->options->isIconNav . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
+    echo 'body{ background: #fff; } body::before{ background: url(' .  $this->options->style_BG . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
     echo "\n";
     echo '</style>';
     echo "\n";
