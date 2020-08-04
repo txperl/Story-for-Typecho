@@ -55,7 +55,7 @@ if ($this->options->style_BG) {
                     <div class="header-logo">
                         <!-- 标题开始 -->
                         <a href="<?php $this->options->siteUrl(); ?>">
-                            <?php $logo = siteName($this->options->titleName);
+                            <?php $logo = siteName($this->options->titleName ?: 'YUMOE:bbwbb');
                             $i = 0;
                             while ($i < $logo['letterLen']) : ?>
                                 <span class="<?php echo $logo['colors'][$i] ?: 'b' ?>"><?php echo $logo['letter'][$i] ?></span>
