@@ -799,6 +799,19 @@ blockquote ul, blockquote ol {
     margin-left: 252px;
     overflow: hidden;
 }
+#nav-tree {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    float: left;
+    outline: none;
+    height: 26px;
+    width: 140px;
+    border: 0;
+    background-color: #414141;
+    padding-left: 5px;
+    color: #fff;
+}
 
 #search-box input {
     float: left;

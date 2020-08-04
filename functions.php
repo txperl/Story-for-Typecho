@@ -77,10 +77,10 @@ function post_tor($content)
     }
 }
 
-function post_config($thiss)
+function post_config($thiss, $isTorTree)
 {
     $content = $thiss->content;
-    $rst = ['isTorTree' => (($GLOBALS['isTorTree'] == 'on') ? 1 : 0)];
+    $rst = ['isTorTree' => $isTorTree];
     preg_match_all('/<!-- isTorTree:(.*?); -->/', $content, $isTor);
 
     if (@$thiss->fields->tor == 'on' || $isTor[1][0] == 'on') {
@@ -90,4 +90,44 @@ function post_config($thiss)
     }
 
     return $rst;
+}
+
+/**
+ * logo字符处理
+ *
+ * @author Twor
+ * @param string $siteName
+ * @return array
+ */
+function siteName(string $siteName)
+{
+    list($letter, $colors) = explode(":", $siteName);
+    $letterLen = mb_strlen($letter, 'utf8');
+    $letterArr = str_split($letter);
+    $colorsArr = str_split($colors);
+    $arrayName = array('letterLen' => $letterLen, 'letter' => $letterArr, 'colors' => $colorsArr);
+    return $arrayName;
+}
+
+/**
+ * 后台主题配置
+ *
+ * @author Twor
+ * @param Typecho_Widget_Helper_Form $themeConfig
+ * @return void
+ */
+function themeConfig(Typecho_Widget_Helper_Form $themeConfig)
+{
+    $titleName = new Typecho_Widget_Helper_Form_Element_Text('titleName', NULL, 'YUMOE:bbwbb', _t('站点名称'), _t('格式[文本:颜色(b黑色|w白色)],默认五个字符(超出或少于请开启自适应)'));
+    $themeConfig->addInput($titleName);
+    $style_BG = new Typecho_Widget_Helper_Form_Element_Text('style_BG', NULL, NULL, _t('背景图'), _t('背景图设置。填入图片 URL 地址，留空为关闭'));
+    $themeConfig->addInput($style_BG);
+    $isIconNav = new Typecho_Widget_Helper_Form_Element_Radio('isIconNav', array(0 => '不开启', 1 => '开启'), 0, _t('导航栏图标'));
+    $themeConfig->addInput($isIconNav);
+    $isTorTree = new Typecho_Widget_Helper_Form_Element_Radio('isTorTree', array(0 => '不开启', 1 => '开启'), 0, _t('导航树'));
+    $themeConfig->addInput($isTorTree);
+    $isAutoNav = new Typecho_Widget_Helper_Form_Element_Radio('isAutoNav', array(0 => '不开启', 1 => '开启'), 1, _t('导航自适应'));
+    $themeConfig->addInput($isAutoNav);
+    $isRSS = new Typecho_Widget_Helper_Form_Element_Radio('isRSS', array(0 => '不开启', 1 => '开启'), 0, _t('RSS订阅'));
+    $themeConfig->addInput($isRSS);
 }

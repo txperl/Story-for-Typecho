@@ -17,7 +17,7 @@
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
-    <?php if ($GLOBALS['isAutoNav'] == 'on') : ?>
+    <?php if ($this->options->isAutoNav) : ?>
         var b = document.getElementsByClassName('b');
         var w = document.getElementsByClassName('w');
         var menupgMargin = (b.length + w.length) * 28;
@@ -62,6 +62,8 @@
             $('#menu-page').fadeOut(300);
         } else {
             $('#menu-page').fadeIn(300);
+            $('#search-box').fadeOut(300);
+            $('#nav-tree').fadeOut(300)
         }
     }
 
@@ -75,7 +77,14 @@
             }
         } else {
             if (c != 'auto') {
-                alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
+                if (document.getElementById('nav-tree').style.display == 'block') {
+                    $('#nav-tree').fadeOut(300);
+                } else {
+                    $('#nav-tree').fadeIn(300);
+                    $('#search-box').fadeOut(300);
+                    $('#menu-page').fadeOut(300);
+                }
+                // alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
             }
         }
     }
@@ -84,7 +93,10 @@
         if (document.getElementById('search-box').style.display == 'block') {
             $('#search-box').fadeOut(300);
         } else {
+            document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
             $('#search-box').fadeIn(300);
+            $('#menu-page').fadeOut(300);
+            $('#nav-tree').fadeOut(300);
         }
     }
 
@@ -133,7 +145,7 @@
     }
 
     <?php if ($this->is('post')) : ?>
-        <?php $postConfig = post_config($this); ?>
+        <?php $postConfig = post_config($this, $this->options->isTorTree); ?>
         <?php if ($postConfig['isTorTree']) : ?>
             isMenu2('auto');
         <?php endif; ?>

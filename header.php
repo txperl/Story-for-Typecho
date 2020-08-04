@@ -2,11 +2,10 @@
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
 <?php
-require_once 'config.php';
-if ($GLOBALS['style_BG'] != '') {
+if ($this->options->isIconNav) {
     echo '<style>';
     echo "\n";
-    echo 'body{ background: #fff; } body::before{ background: url(' . $GLOBALS['style_BG'] . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
+    echo 'body{ background: #fff; } body::before{ background: url(' .  $this->options->isIconNav . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
     echo "\n";
     echo '</style>';
     echo "\n";
@@ -31,7 +30,7 @@ if ($GLOBALS['style_BG'] != '') {
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/prism.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/zoom.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/main.css'); ?>">
-    <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+    <?php if ($this->options->isIconNav) : ?>
         <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/twemoji-awesome.css'); ?>">
     <?php endif; ?>
 
@@ -55,33 +54,34 @@ if ($GLOBALS['style_BG'] != '') {
                 <div class="logo">
                     <div class="header-logo">
                         <!-- 标题开始 -->
-                        <span class="b">Y</span>
-                        <span class="b">U</span>
                         <a href="<?php $this->options->siteUrl(); ?>">
-                            <span class="w">M</span>
+                            <?php $logo = siteName($this->options->titleName);
+                            $i = 0;
+                            while ($i < $logo['letterLen']) : ?>
+                                <span class="<?php echo $logo['colors'][$i] ?: 'b' ?>"><?php echo $logo['letter'][$i] ?></span>
+                            <?php $i++;
+                            endwhile; ?>
                         </a>
-                        <span class="b">O</span>
-                        <span class="b">E</span>
                         <!-- 标题结束 -->
                         <a id="btn-menu" href="javascript:isMenu();">
                             <span class="b">·</span>
                         </a>
                         <a href="javascript:isMenu1();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav) : ?>
                                 <span id="menu-1" class="bf"><i class="twa twa-flags"></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav) : ?>
                                 <span id="menu-2" class="bf"><i class="twa twa-evergreen-tree"></i></span>
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu3();">
-                            <?php if ($GLOBALS['isIconNav'] == 'on') : ?>
+                            <?php if ($this->options->isIconNav) : ?>
                                 <span id="menu-3" class="bf"><i class="twa twa-mag"></i></span>
                             <?php else : ?>
                                 <span id="menu-3" class="bf">3</span>
@@ -95,12 +95,13 @@ if ($GLOBALS['style_BG'] != '') {
                                 <li><?php $pages->title(); ?></li>
                             </a>
                         <?php endwhile; ?>
-                        <?php if ($GLOBALS['isRSS'] == 'on') : ?>
+                        <?php if ($this->options->isIconNav) : ?>
                             <a href="<?php $this->options->feedUrl(); ?>">
                                 <li>RSS</li>
                             </a>
                         <?php endif; ?>
                     </div>
+                    <span id="nav-tree">特定文章中显示</span>
                     <div id="search-box">
                         <form id="search" method="post" action="./" role="search">
                             <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
