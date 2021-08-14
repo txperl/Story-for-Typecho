@@ -55,12 +55,10 @@ function threadedComments($comments, $options)
             <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
                 <div class="comment-inputs">
                     <?php if ($this->user->hasLogin()) : ?>
-                        <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
+                        <input disabled type="text" id="comment-name-logged" class="text" value="<?php $this->user->screenName(); ?>" />
                     <?php else : ?>
                         <input type="text" name="author" id="comment-name" class="text" placeholder="<?php _e('name'); ?>" value="<?php $this->remember('author'); ?>" required />
-
                         <input type="email" name="mail" id="comment-mail" class="text" placeholder="<?php _e('mail'); ?>" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
-
                         <input type="url" name="url" id="comment-url" class="text" placeholder="<?php _e('https://'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
                     <?php endif; ?>
                 </div>
@@ -69,7 +67,7 @@ function threadedComments($comments, $options)
                 </div>
                 <div class="comment-buttons">
                     <div class="left">
-                        <span>Edit with markdown</span>
+                        <span>Edit with Markdown</span>
                     </div>
                     <div class="right">
                         <button id="submitComment" type="submit" class="submit"><?php _e('Submit'); ?></button>
