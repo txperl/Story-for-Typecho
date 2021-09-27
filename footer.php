@@ -13,7 +13,7 @@
     </div>
 </footer>
 
-<script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="<?php $this->options->themeUrl('assert/js/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
