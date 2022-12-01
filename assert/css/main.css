@@ -256,6 +256,20 @@ blockquote ul, blockquote ol {
     margin: 0 0 0 2em !important;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-color: #2f2f2f;
+}
+
+th, td {
+    padding: .2em .3em .1em .3em;
+}
+
 #main {
     width: 100%;
     margin: 0 auto;
