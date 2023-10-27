@@ -130,6 +130,7 @@
         document.getElementById('btn-comments').innerText = 'hide comments';
         document.getElementById('comments').style.display = 'block';
         window.location.hash = "#postFun";
+        footerPosition();
     }
 
     <?php if ($this->is('post')) : ?>
