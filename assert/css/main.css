@@ -1017,7 +1017,7 @@ th, td {
         border-right: none;
     }
     #comment-form .comment-inputs {
-        height: 150px;
+        height: auto;
         display: block;
     }
     #comment-form .comment-inputs input {
