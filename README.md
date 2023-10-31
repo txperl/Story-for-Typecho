@@ -10,11 +10,14 @@
 
 Demo: [Yumoe](https://yumoe.com/).
 
-Version@[Halo](https://github.com/ruibaby/halo): [story-halo](https://github.com/ruibaby/story-halo) by [ruibaby](https://github.com/ruibaby), thanks.
+### Forks
 
-Version@[纸小墨](https://www.chole.io/): [ink-theme-story](https://github.com/akkuman/ink-theme-story) by [akkuman](https://github.com/akkuman), thanks.
+- [ruibaby/story-halo](https://github.com/ruibaby/story-halo) for [Halo](https://github.com/ruibaby/halo)
+- [UTFX0150/emtemp-Story](https://github.com/UTFX0150/emtemp-Story) for [emlog](https://www.emlog.net/)
+- [akkuman/ink-theme-story](https://github.com/akkuman/ink-theme-story) for [纸小墨](https://www.chole.io/)
+- [txperl/Story-for-VeriPress](https://github.com/txperl/Story-for-VeriPress) for [VeriPress](https://github.com/veripress/veripress)
 
-Version@[VeriPress](https://github.com/veripress/veripress): [Story-for-VeriPress](https://github.com/txperl/Story-for-VeriPress).
+以上各版本由不同作者维护，感谢。
 
 ### 预览图
 
@@ -45,7 +48,7 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 #### 菜单
 
-标题旁边有一个 · 字符，点击后便可显示菜单。**1**, **2**, **3** 分别代表 **独立页面菜单**、**导航树**(仅在文章界面有用，仅解析 h3, h4 标签)以及**搜索框**。
+标题旁边有一个 · 字符，点击后便可显示菜单。**1**, **2**, **3** 分别代表 **独立页面菜单**、**导航树**（仅解析 h3, h4 标签）以及**搜索框**。
 
 若您觉得 1, 2, 3 太抽象，可以将 `config.php` 中 `$GLOBALS['isIconNav']` 设置为 `on` 即可替换成相应 Emoji 图标。
 
@@ -57,7 +60,7 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 您可以将 `config.php` 中 `$GLOBALS['isAutoNav']` 设置为 `on` 即可自动调整，无需进行以下操作。
 
-若您网站标题字数与原来(5个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page(777行处)` 及 `#search-box(799行处)` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有4个）。
+若您网站标题字数与原来(5 个英文字母)不同，那要自行修改菜单的 `margin` 值。位于 `assert/css/main.css` 的 `#menu-page` 及 `#search-box` ，每个字符格子宽度为 28px ，可自行计算（别忘了算上菜单格，有 4 个）。
 
 #### 背景图
 
@@ -69,7 +72,7 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 若要手动控制，请于 `文章编辑页面-自定义字段` ，添加 `tor` 字符，并设置为 `on` 或者 `off` 。如下图所示：
 
-![set tor](https://i.loli.net/2020/08/01/hBAa4bUm9MS3DgZ.png)
+![set-tor](https://i.loli.net/2020/08/01/hBAa4bUm9MS3DgZ.png)
 
 注意，导航树仅解析 h3, h4 标签，并且当页面宽度小于 1024px ，导航树将不再显示。
 
@@ -79,11 +82,11 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 请于 `文章编辑页面-自定义字段` ，添加 `cover` 字符，并设置为**相应图片的链接**。如下图所示：
 
-![set cover](https://i.loli.net/2020/08/01/uc36qYJQvEwICgA.png)
+![set-cover](https://i.loli.net/2020/08/01/uc36qYJQvEwICgA.png)
 
 #### 友链模板
 
-请参考 [PR: 增加友链模板 #30](https://github.com/txperl/Story-for-Typecho/pull/30)。
+请参考 [PR#30 增加友链模板](https://github.com/txperl/Story-for-Typecho/pull/30) 设置页面模板。
 
 #### 其他
 
@@ -95,7 +98,7 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 
 #### 感谢
 
-* [Art Chen](https://about.me/hermitage)-[Artifact.me](https://artifact.me/)-[Element](https://github.com/artchen/hexo-theme-element) 主题首页样式参考（获得许可）以及部分代码引用
+* [Art Chen](https://about.me/hermitage) - [Element](https://github.com/artchen/hexo-theme-element) 主题首页样式参考（获得许可）以及部分代码引用
 * [Jimmy](https://jimmycai.com/) Yellow 主题评论框参考以及部分代码引用（获得许可）
 
 #### 许可
