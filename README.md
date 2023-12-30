@@ -12,8 +12,9 @@ Demo: [Yumoe](https://yumoe.com/).
 
 ### Forks
 
-- [ruibaby/story-halo](https://github.com/ruibaby/story-halo) for [Halo](https://github.com/ruibaby/halo)
+- [Twor/hugo-angus](https://github.com/Twor/hugo-angus) for [Hugo](https://github.com/gohugoio/hugo)
 - [UTFX0150/emtemp-Story](https://github.com/UTFX0150/emtemp-Story) for [emlog](https://www.emlog.net/)
+- [ruibaby/story-halo](https://github.com/ruibaby/story-halo) for [Halo](https://github.com/ruibaby/halo)
 - [akkuman/ink-theme-story](https://github.com/akkuman/ink-theme-story) for [纸小墨](https://www.chole.io/)
 - [txperl/Story-for-VeriPress](https://github.com/txperl/Story-for-VeriPress) for [VeriPress](https://github.com/veripress/veripress)
 
